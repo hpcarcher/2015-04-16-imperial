@@ -508,8 +508,8 @@ href="http://www.archer.ac.uk/training/">ARCHER training page</a>.
   </div>
 </div> <!-- End of 'Python' section. -->
 
-<div> <!-- Start of 'R' section. -->
-  <h3>R</h3>
+<div> <!-- Start of 'Make' section. -->
+  <h3>Make</h3>
 
   <p>
     <a href="http://www.r-project.org">R</a> is a programming language
@@ -521,95 +521,162 @@ href="http://www.archer.ac.uk/training/">ARCHER training page</a>.
   <div class="row-fluid">
     <div class="span4">
       <h4>Windows</h4>
-      <p>
-	Install R by downloading and running
-	<a href="http://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
-	from <a href="http://cran.r-project.org/index.html">CRAN</a>.
-	Also, please install the
-	<a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
-      </p>
+      <h4>Make</h4>
+    <p>
+    Once you have installed Git Bash you can install Make by:
+    <ul>
+    <li>
+    Download <code>make.exe</code> from <a
+href="https://github.com/msysgit/msysgit/blob/master/bin/make.exe?raw=true">here</a>
+    </li>
+    <li>
+    Place it in the <code>bin</code> directory where you installed Git
+    Bash e.g. <code>C:\Program Files (x86)\Git\bin</code>.
+    </li>
+    <li> 
+    To test: open a Git Bash window, type <code>make</code>, and press
+    Enter.
+    </li>
+    <li> 
+    You should see the following message
+    <pre>make: *** No targets specified and no makefile found. Stop.</pre>
+    This means that Make was successfully installed.
+    Otherwise, you'll see this error message:
+    <pre>bash: make: command not found</pre>
+    </li>
+    </ul>
+    </p>
     </div>
     <div class="span4">
       <h4>Mac OS X</h4>
       <p>
-	Install R by downloading and running
-	<a href="http://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
-	from <a href="http://cran.r-project.org/index.html">CRAN</a>.
-	Also, please install the
-	<a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
-      </p>
+    For OS X, version 10.9 (Mavericks) or above, download the Command Line
+    Tools by doing:    
+    </p>
+    <pre>xcode-select  --install</pre>
+    <p>
+    For more information, see the <a href="http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/">OSX Daily blog</a>.
+    </p>
+    If you have an older OS X version and you do not already have 
+    access to <code>make</code> from within
+    your shell, you will need to install XCode (which is free, but
+    over a gigabyte to download). 
+    </p>
+    <ul>
+      <li>Go to the Apple app store</li>
+      <li>Search for XCode</li>
+      <li>Click <strong>Free</strong></li>
+      <li>Click <strong>Install App</strong></li>
+    </ul>
+    <p>
+    Once XCode has installed:
+    </p>
+    <ul>
+      <li>Click <strong>Applications</strong></li>
+      <li>Click <strong>XCode</strong></li>
+      <li>Select <strong>XCode&rarr;Preferences...</strong></li>
+      <li>Click <strong>Downloads</strong></li>
+      <li>Select <strong>Command Line Tools</strong></li>
+      <li>Click <strong>Install</strong></li>
+    </ul>
+    <p>
+    You will now be able to run <code>make</code> within your shell.
+    </p>
     </div>
     <div class="span4">
       <h4>Linux</h4>
       <p>
-	You can download the binary files for your distribution
-	from <a href="http://cran.r-project.org/index.html">CRAN</a>. Or
-	you can use your package manager (e.g. for Debian/Ubuntu
-	run <code>sudo apt-get install r-base</code> and for Fedora run
-        <code>sudo yum install R</code>).  Also, please install the
-	<a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
-      </p>
+    Make is a standard tool on Linux systems and should already be
+    available.
+    </p>
     </div>
   </div>
-</div> <!-- End of 'R' section. -->
+</div> <!-- End of 'Make' section. -->
 
-<div> <!-- Start of 'SQLite' section. -->
-  <h3>SQLite</h3>
 
-  <p>
-    SQL is a specialized programming language used with databases.  We
-    use a simple database manager called
-    <a href="http://www.sqlite.org/">SQLite</a> in our lessons.
-  </p>
+<h2>Useful links</h2>
 
-  <div class="row-fluid">
-    <div class="span4">
-      <h4>Windows</h4>
-      <p>
-	Download the <a href="{{site.swc_files}}/sqlite3.exe">sqlite3
-	  program</a> and put it in the directory where you are running
-	examples.
-      </p>
-    </div>
-    <div class="span4">
-      <h4>Mac OS X</h4>
-      <p>
-	<code>sqlite3</code> comes pre-installed on Mac OS X.
-      </p>
-    </div>
-    <div class="span4">
-      <h4>Linux</h4>
-      <p>
-	<code>sqlite3</code> comes pre-installed on Linux.
-      </p>
-    </div>
-  </div>
-</div> <!-- End of 'SQLite' section. -->
+<p>
+Course materials:
+</p>
+<ul>
+<li>
+Attendee <a href="http://github.com/hpcarcher/2014-12-03-edinburgh-students">slides, sample code and scripts</a>
+</li>
+</ul>
+<p>
+Software Carpentry online lessions:
+</p>
+<ul>
+<li><a href="novice/git/index.html">Version Control with Git</a></li>
+<li><a href="novice/python/index.html">Programming with Python</a></li>
+<li><a href="intermediate/make/">Automating tasks with make</a></li>
+<li><a href="http://software-carpentry.org/v4/make/index.html">Make</a> (v4)</li>
+<li><a href="http://software-carpentry.org/v4/test/index.html">Testing</a> (v4)</li>
+</ul>
+<p>
+Git:
+</p>
+<ul>
+<li>
+GitHub <a href="https://try.github.io/levels/1/challenges/1">interactive Git tutorials</a>
+</li>
+<li>
+<a href="http://justinhileman.info/article/git-pretty/">Git pretty</a> - a flowchart about how to recover from mistakes.
+</li>
+<a href="https://presentate.com/bobthecow/talks/changing-history">Changing History, or How to Git pretty</a> - slides relating to the above.
+</li>
+</ul>
+<p>
+Python:
+</p>
+<ul>
+<li>
+<a href="http://matplotlib.org/gallery.html">matplotlib examples gallery</a> - includes source code.
+</li>
+<li>
+<a href="http://wiki.scipy.org/Cookbook">SciPy Cookbook</a> - examples of how to do useful stuff using numpy, scipy, matplotlib, interfacing, etc.
+</li>
+<li>
+Scientific Python <a href="http://scipy-lectures.github.io/">lecture notes</a></li>
+</ul>
+<p>
+Training:
+</p>
+<ul>
+<li>
+<a href="http://www.archer.ac.uk/training/">ARCHER Training</a> - free HPC training all over the UK.
+</li>
+<li>
+<a href="http://www.codecademy.com/">Code Academy</a> - free online programming courses</a>
+</li>
+</ul>
+<p>
+Papers:
+</p>
+<p>
+Wilson G, Aruliah DA, Brown CT, Chue Hong NP, Davis M, et al. (2014)  
+Best Practices for Scientific Computing. PLoS Biol 12(1): e1001745. <a 
+href="http://dx.doi.org/10.1371/journal.pbio.1001745">doi:10.1371/journal.pbio.1001745</a>.
+</p>
+<p>
+Sandve GK, Nekrutenko A, Taylor J, Hovig E (2013) Ten Simple Rules for  
+Reproducible Computational Research. PLoS Comput Biol 9(10): e1003285. 
+<a 
+href="http://dx.doi.org/10.1371/journal.pcbi.1003285">doi:10.1371/journal.pcbi.1003285</a>.
+</p>
+<p>
+Noble WS (2009) A Quick Guide to Organizing Computational Biology 
+Projects. PLoS Comput Biol 5(7): e1000424. <a 
+href="http://dx.doi.org/10.1371/journal.pcbi.1000424">doi:10.1371/journal.pcbi.1000424</a>.
+</p>
+<p>
+Ram K (2013) "git can facilitate greater reproducibility and increased
+transparency in science", Source Code for Biology and Medicine 2013,
+8:7 <a
+href="http://dx.doi.org/10.1186/1751-0473-8-7">doi:10.1186/1751-0473-8-7</a>.
+</p>
+<p>
+Glass, R. (2002) Facts and Fallacies of Software Engineering, Addison-Wesley, 2002. (<a href="http://ff.tu-sofia.bg/~bogi/France/SoftEng/books/Addison%20Wesley%20-%20Robert%20L%20Glass%20-%20Facts%20and%20Fallacies%20of%20Software%20Engineering.pdf">PDF</a>).
+</p>
 
-<!--
-  Uncomment this section if you are using our virtual machine.
-
-<div>
-  <h3>Virtual Machine</h3>
-
-  <p>
-    Some instructors prefer to have learners use a virtual machine (VM)
-    rather than install software on their own computers.  If your
-    instructors have chosen to do this, please:
-  </p>
-  <ol>
-    <li>
-      Install <a href="https://www.virtualbox.org/">VirtualBox</a>.
-    </li>
-    <li>
-      Download our <a href="{{site.swc_vm}}">VM image</a>.
-      <strong>Warning:</strong> this file is 1.7 GByte, so please
-      download it <em>before</em> coming to your workshop.
-    </li>
-    <li>
-      Load the VM into VirtualBox by selecting "Import Appliance" and
-      loading the <code>.ova</code> file.
-    </li>
-  </ol>
-</div>
--->
