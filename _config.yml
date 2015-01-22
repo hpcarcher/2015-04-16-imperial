@@ -1,8 +1,8 @@
 #--------------------------------------------------------------------------------
 # Values for this workshop - EDIT THIS SECTION.
 #--------------------------------------------------------------------------------
-lesson_repo     : "http://github.com/swcarpentry/workshop-template"
-lesson_site     : "http://swcarpentry.github.io/workshop-template"
+lesson_repo     : "http://github.com/hpcarcher/2015-04-16-imperial/"
+lesson_site     : "http://http://hpcarcher.github.io/2015-04-16-imperial/"
 #--------------------------------------------------------------------------------
 # Standard Software Carpentry settings - should not need to be modified.
 #--------------------------------------------------------------------------------

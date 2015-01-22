@@ -2,8 +2,8 @@
 layout: workshop
 root: .
 venue: Imperial College London
-address: ICT Training Room, 204 Central Library Sherfield Building, Exhibition Road, South Kensington,London, SW7 2AZ
-country: U.K.
+address: Imperial College London, ICT Training Room, 204 Central Library Sherfield Building, Exhibition Road, South Kensington, London, SW7 2AZ
+country: United-Kingdom
 language: en
 latlng: 51.4988,-0.174877
 humandate: Apr 16-17, 2015
@@ -14,7 +14,7 @@ instructor: ["Emmanouil (Manos) Farsarakis", TBC]
 helper: [TBC]
 contact: farsarakis@epcc.ed.ac.uk
 etherpad: https://epcc.etherpad.mozilla.org/1
-##eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 1234567890AB key for Eventbrite registration)
+
 ---
 <!--
   HEADER
@@ -24,23 +24,7 @@ etherpad: https://epcc.etherpad.mozilla.org/1
   changes are good.
 -->
 
-<!--
-  EVENTBRITE
 
-  This block includes the Eventbrite registration widget if
-  'eventbrite' has been set in the header.  You can delete it if you
-  are not using Eventbrite, or leave it in, since it will not be
-  displayed if the 'eventbrite' field in the header is not set.
--->
-{% if page.eventbrite %}
-<iframe
-  src="//www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
-  frameborder="0"
-  width="100%"
-  height="206px"
-  scrolling="auto">
-</iframe>
-{% endif %}
 
 <h2>Software Carpentry Workshop</h2>
 
@@ -51,7 +35,7 @@ etherpad: https://epcc.etherpad.mozilla.org/1
   the pitch.
 -->
 <p>
-	<a href="{http://www.archer.ac.uk/">ARCHER</a>, the UK's 
+	<a href="http://www.archer.ac.uk/">ARCHER</a>, the UK's 
 	new national supercomputing service, offers training in 
 	software development and high-performance computing to 
 	scientists and researchers across the UK. As part of our 
@@ -77,7 +61,7 @@ etherpad: https://epcc.etherpad.mozilla.org/1
 -->
 <p>
   <strong>Who:</strong>
-  The course is aimed at graduate students and other researchers.
+  The workshop is aimed at graduate students, post-docs and other researchers. You must have some experience of writing code or scripts and be familiar with programming concepts including conditionals, loops, arrays and functions. You should also be comfortable with using the bash shell. For an introduction to the shell, please see, for example, Software Carpentry's lessons on <a href="http://software-carpentry.org/v5/novice/shell/">The Unix Shell</a>.
 </p>
 
 <!--
@@ -153,23 +137,27 @@ href="http://www.archer.ac.uk/training/">ARCHER training page</a>.
   <div class="span6">
     <h3>Day 1</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Automating tasks with the Unix shell</td> </tr>
-      <tr> <td>10:30</td> <td>Coffee</td> </tr>
-      <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Building programs with Python</td> </tr>
-      <tr> <td>14:30</td>  <td>Coffee</td> </tr>
-      <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
+      <tr> <td>09:00</td>  <td>Introduction to software set-up</td> </tr>
+      <tr> <td>10:00</td> <td>Version control with Git</td> </tr>
+      <tr> <td>10:30</td>  <td>Coffee break</td> </tr>
+      <tr> <td>11:00</td>  <td>Version control with Git</td> </tr>
+      <tr> <td>13:00</td>  <td>Lunch break</td> </tr>
+      <tr> <td>14:00</td>  <td>Building programs with Python</td> </tr>
+      <tr> <td>15:00</td>  <td>Coffee break</td> </tr>
+      <tr> <td>15:30</td>  <td>Building programs with Python</td> </tr>
+      <tr> <td>17:00</td>  <td>Close</td> </tr>
     </table>
   </div>
   <div class="span6">
     <h3>Day 2</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Version control with Git</td> </tr>
-      <tr> <td>10:30</td>  <td>Coffee</td> </tr>
+      <tr> <td>09:00</td>  <td>Automating tasks with Make</td> </tr>
+      <tr> <td>10:30</td>  <td>Coffee break</td> </tr>
+      <tr> <td>11:00</td>  <td>Automating tasks with Make</td> </tr>
       <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Managing data with SQL</td> </tr>
-      <tr> <td>14:30</td>  <td>Coffee</td> </tr>
-      <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
+      <tr> <td>13:00</td>  <td>How (and how much) to test programs</td> </tr>
+      <tr> <td>16:00</td>  <td>Best practices for scientific computing</td> </tr>
+      <tr> <td>17:00</td>  <td>Close</td> </tr>
     </table>
   </div>
 </div>
@@ -216,31 +204,59 @@ href="http://www.archer.ac.uk/training/">ARCHER training page</a>.
 <h2>Syllabus</h2>
 
 <div class="row-fluid">
-  <div class="span6">
-    <h3>The Unix Shell</h3>
+  <div class="span6"> 
+    <h3>Version Control with Git</h3>
     <ul>
-      <li>Files and directories</li>
-      <li>History and tab completion</li>
-      <li>Pipes and redirection</li>
-      <li>Looping over files</li>
-      <li>Creating and running shell scripts</li>
-      <li>Finding things</li>
-      <li><a href="{{site.swc_lessons}}/ref/01-shell.html">Reference...</a></li>
+      <li>Creating a repository</li>
+      <li>Recording changes to files: <code>add</code>, <code>commit</code>, ...</li>
+      <li>Viewing changes: <code>status</code>, <code>diff</code>, ...</li>
+      <li>Ignoring files</li>
+      <li>Working on the web: <code>clone</code>, <code>pull</code>, <code>push</code>, ...</li>
+      <li>Resolving conflicts</li>
+      <li>Open licenses</li>
+      <li>Where to host work, and why</li>
+      <li><a href="novice/ref/02-git.html">Reference...</a></li>
     </ul>
   </div>
   <div class="span6">
-    <h3>Programming in Python</h3>
+    <h3>Building programs with Python</h3>
     <ul>
       <li>Using libraries</li>
       <li>Working with arrays</li>
       <li>Reading and plotting data</li>
       <li>Creating and using functions</li>
-      <li>Loops and conditionals</li>
+      <li>Loops and conditionals: <code>for</code>, <code>if</code>, <code>else</code>, ...</li>
       <li>Defensive programming</li>
       <li>Using Python from the command line</li>
-      <li><a href="{{site.swc_lessons}}/ref/03-python.html">Reference...</a></li>
+      <li><a href="novice/ref/03-python.html">Reference...</a></li>
     </ul>
   </div>
+</div>
+
+<div class="row-fluid">
+  <div class="span6"> 
+    <h3>Automating tasks with Make</h3>
+    <ul>
+      <li>Make is not just for compiling code</li>
+      <li>Basic Tasks</li>
+      <li>Automatic Variables and Wildcards</li>
+      <li>Patterns</li>
+      <li>Variables</li>
+      <li><a href="intermediate/make/reference.html">Reference...</a></li>
+    </ul>
+  </div>
+  <div class="span6">
+    <h3>How (and how much) to test programs</h3>
+    <ul>
+      <li>Can I do testing?</li>
+      <li>Big Tests and Little Tests</li>
+      <li>End to End</li>
+      <li>Unit Testing</li>
+      <li>Putting Tests Together</li>
+      <li><a href="novice/testing/index.html">Reference...</a></li>
+     </ul>
+  </div>
+</div>
   <!-- 
   <div class="span6">
     <h3>Programming in R</h3>
