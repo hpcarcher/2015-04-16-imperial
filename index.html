@@ -1,109 +1,89 @@
 ---
 layout: workshop
 root: .
-venue: Imperial College London
-address: Imperial College London, ICT Training Room, 204 Central Library Sherfield Building, Exhibition Road, South Kensington, London, SW7 2AZ
+venue: The University of Edinburgh
+address: Room 3217, James Clerk Maxwell Building, Peter Guthrie Tait Road, Edinburgh, EH9 3FD
 country: United-Kingdom
-language: en
-latlng: 51.4988,-0.174877
-humandate: Apr 16-17, 2015
-humantime: 09:00 am - 5:00 pm
-startdate: 2015-04-16
-enddate: 2015-04-17
-instructor: ["Emmanouil (Manos) Farsarakis", "Mario Antonioletti"]
-helper: ["TBC"]
+humandate: Dec 3-4, 2014
+humantime: 9:00 am - 5:00 pm
+startdate: 2014-12-03
+enddate: 2014-12-04
+latlng: 55.921628,-3.174155
+registration: open
+instructor: ["Mike Jackson", "Arno Proeme", "Mario Antonioletti", "Alistair Grant"]
+helper: ["Emmanouil Farsarakis", "Leighton Pritchard", "Peter Cock"]
 contact: support@archer.ac.uk
-etherpad: https://epcc.etherpad.mozilla.org/1
-
+lessons: ['Git', 'Python', 'VM']
 ---
-<!--
-  HEADER
 
-  Edit the values in the block above to be appropriate for your
-  workshop.  Run 'tools/check' *before* committing to make sure that
-  changes are good.
--->
-
-
-
-<h2>Software Carpentry Workshop</h2>
-
-<!--
-  INTRODUCTION
-
-  Edit the general explanatory paragraph below if you want to change
-  the pitch.
--->
+<h2>General Information</h2>
 <p>
-	<a href="http://www.archer.ac.uk/">ARCHER</a>, the UK's 
-	new national supercomputing service, offers training in 
-	software development and high-performance computing to 
-	scientists and researchers across the UK. As part of our 
-	training service we are running a 2 day Software 
-	Carpentry bootcamp.
+  <a href="http://www.archer.ac.uk">ARCHER</a>, the UK's national
+  supercomputing service, offers training in software development and
+  high-performance computing to scientists and researchers across the
+  UK. As part of our training service we are running a 2 day Software
+  Carpentry workshop. 
 </p>
 <p>
-  <a href="{{site.swc_site}}">Software Carpentry</a>'s mission
-  is to help scientists and engineers get more research done in less
-  time and with less pain by teaching them basic lab skills for
-  scientific computing.  This hands-on workshop will cover basic
-  concepts and tools, including program design, version control, data
-  management, and task automation.  Participants will be encouraged to
-  help one another and to apply what they have learned to their own
-  research problems.
+  <a href="http://software-carpentry.org">Software Carpentry</a>
+  workshops help researchers become more productive by teaching software
+  development skills that enable more to be done, in less time, and with
+  less pain. We will cover skills including version control, task
+  automation, good programming practice and automated testing. These are
+  skills that, in an ideal world, researchers would master before
+  tackling anything with "cloud" or "peta" or "HPC" in their name, skills
+  that enable researchers to optimise their time and provide them with a
+  secure basis to optimise and parallelise their code.
+</p>
+<p>
+  This workshop is being run by <a
+  href="http://www.epcc.ed.ac.uk">EPCC</a>, as part of ARCHER. The
+  workshop is in collaboration with EPCC's <a
+  href="http://www.prace-project.eu/PRACE-Advanced-Training-Centres">PRACE
+  Advanced Training Centre</a> (PATC), and Software Carpentry, a <a
+  href="https://wiki.mozilla.org/ScienceLab">Mozilla Science Lab</a>
+  initiative. 
 </p>
 
-<!--
-  AUDIENCE
-
-  Explain who your audience is.  (In particular, tell readers if the
-  workshop is only open to people from a particular institution.
--->
 <p>
   <strong>Who:</strong>
-  The workshop is aimed at graduate students, post-docs and other researchers. You must have some experience of writing code or scripts and be familiar with programming concepts including conditionals, loops, arrays and functions. You should also be comfortable with using the bash shell. For an introduction to the shell, please see, for example, Software Carpentry's lessons on <a href="http://software-carpentry.org/v5/novice/shell/">The Unix Shell</a>.
+  The workshop is aimed at graduate students, post-docs and other
+  researchers. You must have some experience of writing code or scripts
+  and be familiar with programming concepts including conditionals,
+  loops, arrays and functions. You should also be comfortable with using
+  the bash shell. For an introduction to the shell, please see, for
+  example, Software Carpentry's lessons on <a
+  href="http://software-carpentry.org/v5/novice/shell/">The Unix
+  Shell</a>.
 </p>
 
 <!--
-  LOCATION
-
-  This block displays the address and links to maps showing directions
-  if the latitude and longitude of the workshop have been set.  You
-  can use http://itouchmap.com/latlong.html to find the lat/long of an
-  address.
+    This block displays the address and links to a map showing directions.
 -->
 {% if page.latlng %}
 <p>
   <strong>Where:</strong>
-  {{page.address}}.
+  {{ page.address }}.
   Get directions with
-  <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=16">OpenStreetMap</a>
+  <a href="//www.openstreetmap.org/?mlat={{ page.latlng | replace:',','&mlon=' }}&zoom=16">OpenStreetMap</a>
   or
-  <a href="//maps.google.com/maps?q={{page.latlng}}">Google Maps</a>.
-  <li><a href="http://www3.imperial.ac.uk/portal/page/portallive/3F83FE8FD0480636E0440003BACD17D6">Click here</a> for information on getting here and maps of the South Kensington campus and area. </li>
-  <li>Information about the accessibility of the South Kensington Campus is available online through the <a href="http://www.disabledgo.com/en/org-results/imperial-college-london/uni-libraries">DisabledGo access guides</a></li>
+  <a href="//maps.google.com/maps?q={{ page.latlng }}">Google Maps</a>. Directions for <a href="http://www.ph.ed.ac.uk/about/finding-us/getting-to-jcmb">Getting to the James Clerk Maxwell Building</a>. Kings Buildings Campus accessibility map (<a href="http://www.docs.csg.ed.ac.uk/EstatesBuildings/Development/Access%20Guides/KB%20Campus%20Accessibility%20Map.pdf">PDF</a>), James Clerk Maxwell Building accessibility guide <a href="http://www.docs.csg.ed.ac.uk/EstatesBuildings/Development/Access%20Guides/James%20Clerk%20Maxwell%20Building%20(JCMB)%20Guide%20to%20Access.pdf">PDF</a>.
 </p>
 {% endif %}
 
 <!--
-  SPECIAL REQUIREMENTS
-
-  Modify the block below if there are any special requirements.
+    Modify the block below if there are any special requirements.
 -->
 <p>
-  <strong>Requirements:</strong> Participants must bring a laptop with
-  a few specific software packages installed (listed
-  <a href="#setup">below</a>). They are also required to abide by
-  Software Carpentry's
-  <a href="{{site.swc_site}}/conduct.html">Code of Conduct</a>.
+  <strong>Requirements:</strong>
+  Participants must bring a laptop with a few specific software packages installed
+  (listed below). They are also required to abide by Software Carpentry's
+  <a href="http://software-carpentry.org/conduct.html">Code of Conduct</a>.
 </p>
 
 <!--
-  CONTACT EMAIL ADDRESS
-
-  Display the contact email address set in the header.  If an address
-  isn't set in the header, the Software Carpentry admin address is
-  used.
+    This block automatically inserts a contact email address if one has been specified for the page.
+    If one hasn't, this block inserts the generic contact address for Software Carpentry.
 -->
 <p>
   <strong>Contact</strong>:
@@ -126,85 +106,41 @@ href="http://www.archer.ac.uk/training/">ARCHER training page</a>.
 
 <hr/>
 
-<!--
-  SCHEDULE
-
-  Show the workshop's schedule.  Edit the items and times in the table
-  to match your plans.  You may also want to change 'Day 1' and 'Day
-  2' to be actual dates or days of the week.
--->
 <h2>Schedule</h2>
 
 <div class="row-fluid">
   <div class="span6">
     <h3>Day 1</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Introduction to software set-up</td> </tr>
+      <tr> <td>09:00</td> <td>Introduction and software set-up</td> </tr>
       <tr> <td>10:00</td> <td>Version control with Git</td> </tr>
-      <tr> <td>10:30</td>  <td>Coffee break</td> </tr>
-      <tr> <td>11:00</td>  <td>Version control with Git</td> </tr>
-      <tr> <td>13:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>14:00</td>  <td>Building programs with Python</td> </tr>
-      <tr> <td>15:00</td>  <td>Coffee break</td> </tr>
-      <tr> <td>15:30</td>  <td>Building programs with Python</td> </tr>
-      <tr> <td>17:00</td>  <td>Close</td> </tr>
+      <tr> <td><em>10:30</em></td> <td><em>Coffee break</em></td> </tr>
+      <tr> <td>11:00</td> <td>Version control with Git</td> </tr>
+      <tr> <td>13:00</td> <td>Lunch break</td> </tr>
+      <tr> <td>14:00</td> <td>Building programs with Python</td> </tr>
+      <tr> <td><em>15:00</em></td> <td><em>Coffee break</em></td> </tr>
+      <tr> <td>15:30</td> <td>Building programs with Python</td> </tr>
+      <tr> <td>17:00</td> <td>Close</td> </tr>
     </table>
   </div>
   <div class="span6">
     <h3>Day 2</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Automating tasks with Make</td> </tr>
-      <tr> <td>10:30</td>  <td>Coffee break</td> </tr>
-      <tr> <td>11:00</td>  <td>Automating tasks with Make</td> </tr>
-      <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>How (and how much) to test programs</td> </tr>
-      <tr> <td>14:30</td>  <td>Coffee break</td> </tr>
-      <tr> <td>15:00</td>  <td>How (and how much) to test programs</td> </tr>
-      <tr> <td>16:00</td>  <td>Best practices for scientific computing</td> </tr>
-      <tr> <td>17:00</td>  <td>Close</td> </tr>
+      <tr> <td>09:00</td> <td>Automating tasks with Make</td> </tr>
+      <tr> <td><em>10:30</em></td> <td><em>Coffee break</em></td> </tr>
+      <tr> <td>11:00</td> <td>Automating tasks with Make</td> </tr>
+      <tr> <td>12:00</td> <td>Lunch break</td> </tr>
+      <tr> <td>13:00</td> <td>How (and how much) to test programs</td> </tr>
+      <tr> <td><em>14:30</em></td> <td><em>Coffee break</em></td> </tr>
+      <tr> <td>15:00</td> <td>How (and how much) to test programs</td> </tr>
+      <tr> <td>16:00</td> <td>Best practices for scientific computing</td> </tr>
+      <tr> <td>17:00</td> <td>Close</td> </tr>
     </table>
   </div>
 </div>
 
-<!--
-  ETHERPAD
-
-  Display the Etherpad for the workshop.  You can set this up in
-  advance or on the first day; either way, make sure you push changes
-  to GitHub after you have its URL.  To create an Etherpad, go to
-
-      http://etherpad.mozilla.org/YYYY-MM-DD-site
-
-  where 'YYYY-MM-DD-site' is the identifier for your workshop (e.g.,
-  '2015-06-10-esu'.
--->
-{% if page.etherpad %}
-<p>
-  <strong>Etherpad:</strong> <a href="{{page.etherpad}}">{{page.etherpad}}</a>.
-  <br/>
-  We will use this Etherpad for chatting, taking notes, and sharing URLs and bits of code.
-</p>
-{% endif %}
-
 <hr/>
 
-<!--
-  SYLLABUS
-
-  Show what topics will be covered.
-
-  1. If your workshop is R rather than Python, remove the comment
-     around that section and put a comment around the Python section.
-  2. Some workshops will delete SQL.
-  3. Please make sure the list of topics is synchronized with what you
-     intend to teach.
-  4. You may need to move the div's with class="span6" around inside
-     the div's with class="row-fluid" to balance the multi-column layout.
-
-  This is one of the places where people frequently make mistakes, so
-  please preview your site before committing, and make sure to run
-  'tools/check' as well.
--->
 <h2>Syllabus</h2>
 
 <div class="row-fluid">
@@ -265,333 +201,60 @@ href="http://www.archer.ac.uk/training/">ARCHER training page</a>.
 <hr/>
 
 <!--
-  SETUP
-
-  Delete irrelevant sections from the setup instructions.  Each
-  section is inside a 'div' without any classes to make the beginning
-  and end easier to find.
-
-  This is the other place where people frequently make mistakes, so
-  please preview your site before committing, and make sure to run
-  'tools/check' as well.
+    Edit the setup instructions in _includes/setup.html to reflect your workshop.
+    (In particular, most workshops teach either Python or R, not both.)
 -->
 
-<h2 id="setup">Setup</h2>
+<h2>Setup</h2>
 
 <p>
-  <a href="setup/index.html">This page</a> has instructions on testing
-  that you have the right software installed.
+  To participate in a Software Carpentry workshop, 
+  you will need working copies of the software described below.
+  Please make sure to install everything
+  (or at least to download the installers)
+  <em>before</em> the start of your workshop.
 </p>
 
-<div> <!-- Start of 'editor' section. -->
-  <h3>Text Editor</h3>
+{% include setup.html %}
 
-  <p>
-    When you're writing code, it's nice to have a text editor that is
-    optimized for writing code, with features like automatic
-    color-coding of key words.  The default text editor on Mac OS X and
-    Linux is usually set to Vim, which is not famous for being
-    intuitive.  if you accidentally find yourself stuck in it, try
-    typing the escape key, followed by ':q!' (colon, lower-case 'q',
-    exclamation mark), then hitting Return to return to the shell.
-  </p>
+<h2>Check your setup</h2>
 
-  <div class="row-fluid">
-    <div class="span4">
-      <h4>Windows</h4>
-      <p>
-	<code>nano</code> is the editor installed by the Software
-	Carpentry Installer, it is a basic editor integrated into the
-	lesson material.
-      </p>
-      <p>
-	<a href="http://notepad-plus-plus.org/">Notepad++</a> is a
-	popular free code editor for Windows.  Be aware that you must
-	add its installation directory to your system path in order to
-	launch it from the command line (or have other tools like Git
-	launch it for you).  Please ask your instructor to help you do
-	this.
-      </p>
-    </div>
-    <div class="span4">
-      <h4>Mac OS X</h4>
-      <p>
-	We recommend
-	<a href="http://www.barebones.com/products/textwrangler/">Text Wrangler</a> or
-	<a href="http://www.sublimetext.com/">Sublime Text</a>.
-	In a pinch, you can use <code>nano</code>,
-	which should be pre-installed.
-      </p>
-    </div>
-    <div class="span4">
-      <h4>Linux</h4>
-      <p>
-	<a href="http://kate-editor.org/">Kate</a> is one option for
-	Linux users.  In a pinch, you can use <code>nano</code>, which
-	should be pre-installed.
-      </p>
-    </div>
-  </div>
-</div> <!-- End of 'editor' section. -->
+<p>
+  To check you have the correct version of Python:
+</p>
+<ul>
+  <li>
+    Download <a href="./setup/swc-installation-test-1.py">swc-installation-test-1.py</a>
+  </li>
+  <li>Open up a bash shell</li>
+  <li>Change into the directory where you put the script</li>
+  <li>Run the script:
+    <pre>python swc-installation-test-1.py</pre>
+  </li>
+</ul>
+<p>
+  To check you have the necessary software and tools:
+</p>
+<ul>
+  <li>
+    Download <a href="./setup/swc-installation-test-2.py">swc-installation-test-2.py</a>
+  </li>
+  <li>Open up a bash shell</li>
+  <li>Change into the directory where you put the script</li>
+  <li>Run the script:
+    <pre>python swc-installation-test-2.py</pre>
+  </li>
+</ul>
 
-<div> <!-- Start of 'shell' section. -->
-  <h3>The Bash Shell</h3>
+<hr/>
 
-  <p>
-    Bash is a commonly-used shell that gives you the power to do simple
-    tasks more quickly.
-  </p>
+<h2>Recognising prompts and how to exit</h2>
 
-  <div class="row-fluid">
-    <div class="span4">
-      <h4>Windows</h4>
-      <p>
-	Install Git for Windows by download and running
-	<a href="http://msysgit.github.io/">the installer</a>.
-	This will provide you with both Git and Bash in the Git Bash program.
-      </p>
-      <h4>Software Carpentry Installer</h4>
-      <p><em>This installer requires an active internet connection.</em></p>
-      <p>After installing Python and Git Bash:</p>
-      <ul>
-	<li>
-          Download the <a href="{{site.swc_installer}}">installer</a>.
-	</li>
-	<li>
-          If the file opens directly in the browser
-          select <strong>File&rarr;Save Page As</strong> to download it
-          to your computer.
-	</li>
-	<li>
-          Double click on the file to run it.
-	</li>
-      </ul>
-    </div>
-    <div class="span4">
-      <h4>Mac OS X</h4>
-      <p>
-	The default shell in all versions of Mac OS X is bash, so no
-	need to install anything.  You access bash from the Terminal
-	(found in
-	<code>/Applications/Utilities</code>).  You may want to keep
-	Terminal in your dock for this workshop.
-      </p>
-    </div>
-    <div class="span4">
-      <h4>Linux</h4>
-      <p>
-	The default shell is usually <code>bash</code>, but if your
-	machine is set up differently you can run it by opening a
-	terminal and typing <code>bash</code>.  There is no need to
-	install anything.
-      </p>
-    </div>
-  </div>
-<div> <!-- End of 'shell' section. -->  
+<p>
+If you find yourself in a shell that you don't recognise, or in an editor that you can't get out of then see <a href="novice/ref/05-prompts-exits.html">Recognising prompts and how to exit</a>.
+</p>
 
-<div> <!-- Start of 'Git' section. -->
-  <h3>Git</h3>
-
-  <p>
-    Git is a version control system that lets you track who made changes
-    to what when and has options for easily updating a shared or public
-    version of your code
-    on <a href="https://github.com/">github.com</a>.
-  </p>
-
-  <div class="row-fluid">
-    <div class="span4">
-      <h4>Windows</h4>
-      <p>
-	Git should be installed on your computer as part of your Bash
-	install (described above).
-      </p>
-    </div>
-    <div class="span4">
-      <h4>Mac OS X</h4>
-      <p>
-	<strong>For OS X 10.8 and higher</strong>, install Git for Mac
-	by downloading and running
-	<a href="http://sourceforge.net/projects/git-osx-installer/files/latest/download">the installer</a>.
-	After installing Git, there will not be anything in your <code>/Applications</code> folder, 
-	as Git is a command line program.
-	<strong>For older versions of OS X (10.5-10.7)</strong> use the
-	most recent available installer for your
-	OS <a href="http://sourceforge.net/projects/git-osx-installer/files/">available
-	  here</a>.  Use the Leopard installer for 10.5 and the Snow
-	Leopard installer for 10.6-10.7.
-      </p>
-    </div>
-    <div class="span4">
-      <h4>Linux</h4>
-      <p>
-	If Git is not already available on your machine you can try to
-	install it via your distro's package manager. For Debian/Ubuntu run
-        <code>sudo apt-get install git</code> and for Fedora run
-        <code>sudo yum install git</code>.
-      </p>
-    </div>
-  </div>
-</div> <!-- End of 'Git' section. -->
-
-<div> <!-- Start of 'Python' section. -->
-  <h3>Python</h3>
-
-  <p>
-    <a href="http://python.org">Python</a> is a popular language for
-    scientific computing, and great for general-purpose programming as
-    well.  Installing all of its scientific packages individually can be
-    a bit difficult, so we recommend an all-in-one installer.
-  </p>
-
-  <div class="row-fluid">
-    <div class="span4">
-      <h4>Windows</h4>
-      <ul>
-	<li>
-          Download and
-          install <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a>.
-	</li>
-	<li>
-          Use all of the defaults for installation
-          <em>except</em> make sure to check <strong>Make Anaconda the
-            default Python</strong>.
-	</li>
-      </ul>
-    </div>
-    <div class="span4">
-      <h4>Mac OS X</h4>
-      <ul>
-	<li>
-          Download and
-          install <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a>.
-	</li>
-	<li>
-          Use all of the defaults for installation
-          <em>except</em>
-          make sure to check <strong>Make Anaconda the default Python</strong>.
-	</li>
-      </ul>
-    </div>
-    <div class="span4">
-      <h4>Linux</h4>
-      <p>
-	We recommend the all-in-one scientific Python installer
-	<a href="http://continuum.io/downloads.html">Anaconda</a>.
-	(Installation requires using the shell and if you aren't
-	comfortable doing the installation yourself just
-	download the installer and we'll help you at the boot
-	camp.)
-      </p>
-      <ol>
-	<li>
-          Download the installer that matches your operating
-          system and save it in your home folder.
-	</li>
-	<li>
-          Open a terminal window.
-	</li>
-	<li>
-          Type <pre>bash Anaconda-</pre> and then press
-          tab. The name of the file you just downloaded should
-          appear.
-	</li>
-	<li>
-          Press enter. You will follow the text-only prompts.  When
-          there is a colon at the bottom of the screen press the down
-          arrow to move down through the text. Type <code>yes</code> and
-          press enter to approve the license. Press enter to approve the
-          default location for the files. Type <code>yes</code> and
-          press enter to prepend Anaconda to your <code>PATH</code>
-          (this makes the Anaconda distribution the default Python).
-	</li>
-      </ol>
-    </div>
-  </div>
-</div> <!-- End of 'Python' section. -->
-
-<div> <!-- Start of 'Make' section. -->
-  <h3>Make</h3>
-
-  <p>
-    Originally invented to manage compilation of programs written in languages like C, Make can be used to automatically update any set of files that depend on another set of files. This makes it a good solution for many data analysis and data management problems. While there are many build tools now in existence (e.g. ANT and CMake) they share the same fundamental concepts as Make.
-  </p>
-
-  <div class="row-fluid">
-    <div class="span4">
-      <h4>Windows</h4>
-      <h4>Make</h4>
-    <p>
-    Once you have installed Git Bash you can install Make by:
-    <ul>
-    <li>
-    Download <code>make.exe</code> from <a
-href="https://github.com/msysgit/msysgit/blob/master/bin/make.exe?raw=true">here</a>
-    </li>
-    <li>
-    Place it in the <code>bin</code> directory where you installed Git
-    Bash e.g. <code>C:\Program Files (x86)\Git\bin</code>.
-    </li>
-    <li> 
-    To test: open a Git Bash window, type <code>make</code>, and press
-    Enter.
-    </li>
-    <li> 
-    You should see the following message
-    <pre>make: *** No targets specified and no makefile found. Stop.</pre>
-    This means that Make was successfully installed.
-    Otherwise, you'll see this error message:
-    <pre>bash: make: command not found</pre>
-    </li>
-    </ul>
-    </p>
-    </div>
-    <div class="span4">
-      <h4>Mac OS X</h4>
-      <p>
-    For OS X, version 10.9 (Mavericks) or above, download the Command Line
-    Tools by doing:    
-    </p>
-    <pre>xcode-select  --install</pre>
-    <p>
-    For more information, see the <a href="http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/">OSX Daily blog</a>.
-    </p>
-    If you have an older OS X version and you do not already have 
-    access to <code>make</code> from within
-    your shell, you will need to install XCode (which is free, but
-    over a gigabyte to download). 
-    </p>
-    <ul>
-      <li>Go to the Apple app store</li>
-      <li>Search for XCode</li>
-      <li>Click <strong>Free</strong></li>
-      <li>Click <strong>Install App</strong></li>
-    </ul>
-    <p>
-    Once XCode has installed:
-    </p>
-    <ul>
-      <li>Click <strong>Applications</strong></li>
-      <li>Click <strong>XCode</strong></li>
-      <li>Select <strong>XCode&rarr;Preferences...</strong></li>
-      <li>Click <strong>Downloads</strong></li>
-      <li>Select <strong>Command Line Tools</strong></li>
-      <li>Click <strong>Install</strong></li>
-    </ul>
-    <p>
-    You will now be able to run <code>make</code> within your shell.
-    </p>
-    </div>
-    <div class="span4">
-      <h4>Linux</h4>
-      <p>
-    Make is a standard tool on Linux systems and should already be
-    available.
-    </p>
-    </div>
-  </div>
-</div> <!-- End of 'Make' section. -->
-
+<hr/>
 
 <h2>Useful links</h2>
 
@@ -600,7 +263,7 @@ Course materials:
 </p>
 <ul>
 <li>
-Attendee <a href="http://github.com/hpcarcher/2015-04-16-imperial-students">slides, sample code and scripts</a>
+Attendee <a href="http://github.com/hpcarcher/2014-12-03-edinburgh-students">slides, sample code and scripts</a>
 </li>
 </ul>
 <p>
@@ -678,4 +341,3 @@ href="http://dx.doi.org/10.1186/1751-0473-8-7">doi:10.1186/1751-0473-8-7</a>.
 <p>
 Glass, R. (2002) Facts and Fallacies of Software Engineering, Addison-Wesley, 2002. (<a href="http://ff.tu-sofia.bg/~bogi/France/SoftEng/books/Addison%20Wesley%20-%20Robert%20L%20Glass%20-%20Facts%20and%20Fallacies%20of%20Software%20Engineering.pdf">PDF</a>).
 </p>
-
