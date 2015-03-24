@@ -1,17 +1,17 @@
 ---
 layout: workshop
 root: .
-venue: The University of Edinburgh
-address: Room 3217, James Clerk Maxwell Building, Peter Guthrie Tait Road, Edinburgh, EH9 3FD
+venue: Imperial College London
+address: Imperial College London, ICT Training Room, 204 Central Library Sherfield Building, Exhibition Road, South Kensington, London, SW7 2AZ
 country: United-Kingdom
 humandate: Dec 3-4, 2014
-humantime: 9:00 am - 5:00 pm
-startdate: 2014-12-03
-enddate: 2014-12-04
-latlng: 55.921628,-3.174155
+humandate: Apr 16-17, 2015
+startdate: 2015-04-16
+enddate: 2015-04-17
+latlng: 51.4988,-0.174877
 registration: open
-instructor: ["Mike Jackson", "Arno Proeme", "Mario Antonioletti", "Alistair Grant"]
-helper: ["Emmanouil Farsarakis", "Leighton Pritchard", "Peter Cock"]
+instructor: ["Emmanouil (Manos) Farsarakis", "Mario Antonioletti"]
+helper: ["Iain Emsley"]
 contact: support@archer.ac.uk
 lessons: ['Git', 'Python', 'VM']
 ---
@@ -63,11 +63,13 @@ lessons: ['Git', 'Python', 'VM']
 {% if page.latlng %}
 <p>
   <strong>Where:</strong>
-  {{ page.address }}.
+  {{page.address}}.
   Get directions with
-  <a href="//www.openstreetmap.org/?mlat={{ page.latlng | replace:',','&mlon=' }}&zoom=16">OpenStreetMap</a>
+  <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=16">OpenStreetMap</a>
   or
-  <a href="//maps.google.com/maps?q={{ page.latlng }}">Google Maps</a>. Directions for <a href="http://www.ph.ed.ac.uk/about/finding-us/getting-to-jcmb">Getting to the James Clerk Maxwell Building</a>. Kings Buildings Campus accessibility map (<a href="http://www.docs.csg.ed.ac.uk/EstatesBuildings/Development/Access%20Guides/KB%20Campus%20Accessibility%20Map.pdf">PDF</a>), James Clerk Maxwell Building accessibility guide <a href="http://www.docs.csg.ed.ac.uk/EstatesBuildings/Development/Access%20Guides/James%20Clerk%20Maxwell%20Building%20(JCMB)%20Guide%20to%20Access.pdf">PDF</a>.
+  <a href="//maps.google.com/maps?q={{page.latlng}}">Google Maps</a>.
+  <li><a href="http://www3.imperial.ac.uk/portal/page/portallive/3F83FE8FD0480636E0440003BACD17D6">Click here</a> for information on getting here and maps of the South Kensington campus and area. </li>
+  <li>Information about the accessibility of the South Kensington Campus is available online through the <a href="http://www.disabledgo.com/en/org-results/imperial-college-london/uni-libraries">DisabledGo access guides</a></li>
 </p>
 {% endif %}
 
