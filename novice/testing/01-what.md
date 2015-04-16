@@ -107,12 +107,12 @@ In a lot of cases yes - any complex code will have a range where its correct ope
 
 ## Look at The Code
 
-In the cloned Git repository for the workshop, switch to the directory <pre>testing/ants</pre>
+In the cloned Git repository for the workshop, switch to the directory <pre>testing</pre>
 
 Assuming you were in the root of the repository:
 
 ~~~
-$ cd testing/ants
+$ cd testing
 ~~~
 {:class="in"}
 
