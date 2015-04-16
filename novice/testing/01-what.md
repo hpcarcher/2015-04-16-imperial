@@ -116,6 +116,7 @@ $ cd testing/ants
 {:class="in"}
 
 In that directory you should have the following files:
+
 ~~~
 ./:
 README
@@ -222,3 +223,4 @@ Regardless of whether it is a test of a:
 * Starting to Test
 * Breaking up code
 * Choosing Wisely
+
