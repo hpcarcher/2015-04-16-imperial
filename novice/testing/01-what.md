@@ -151,6 +151,7 @@ Take a few minutes - look over the code - try to figure out what it is doing.
 Before you try running it, you will need to generate some input data.
 
 To do this, we need to use the write_data_pickle.py and this needs the argparse package:
+
 ~~~
 $ pip install argparse
 ~~~
