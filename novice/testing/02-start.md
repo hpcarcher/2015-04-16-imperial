@@ -17,8 +17,8 @@ Summarise an end to end test.
 
 Determine a flow pattern:
 
-    python write_data_pickle.py scottish_city_distances.csv scottish_city_distances.pickled
-    head scottish_city_distances.pickled
+    python util/write_data_pickle.py data/scottish_city_distances.csv data/scottish_city_distances.pickled
+    head data/scottish_city_distances.pickled
     python anttsp.py 7 data/scottish_city_distances.pickled scottish_path.pickled
     head scottish_path.pickled
 
