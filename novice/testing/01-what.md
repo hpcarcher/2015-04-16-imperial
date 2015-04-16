@@ -116,26 +116,30 @@ $ cd testing/ants
 ~~~
 {:class="in"}
 
-In that directory you should have the following files:
+In that directory run the command "ls -R1", and you should get the following
+output:
 
 ~~~
-./:
-README
-ant.py
+.:
 antcolony.py
 antgraph.py
+ant.py
 anttsp.py
 data
+README
 util
+
 ./data:
-cities.csv
 citiesAndDistances.pickled
+cities.csv
+scottish_city_distances.csv
+scottish_city_loc.csv
+scottish_map.properties
 ukcities.csv
+
 ./util:
 __init__.py
-__init__.pyc
 plot_city_path.py
-plot_city_path.pyc
 sample_map.py
 write_data_csv.py
 write_data_pickle.py
@@ -152,12 +156,13 @@ $ pip install argparse
 ~~~
 {:class="in"}
 
-If the package is not installed this will ask you to confirm the install command, if the package is present it will tell you.
+If the package is not installed this will ask you to confirm the install
+command, if the package is present it will tell you.
 
 Now run the write_data_pickle:
 
 ~~~
-$ python write_data_pickle.py <city data csv> <pickle output file>
+$ python util/write_data_pickle.py <city data csv> <pickle output file>
 ~~~
 {:class="in"}
 
