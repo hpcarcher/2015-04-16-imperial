@@ -73,6 +73,7 @@ Start by writing out on paper what you are going to do.
 Sanity Check it with someone.
 
 Try writing the tests 
+
 	- don't worry if things go wrong 
 	- stay calm, try to work through it, ask someone (or more likely tell someone what is going on and you'll figure it out yourself)
 	
