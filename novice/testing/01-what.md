@@ -118,27 +118,28 @@ $ cd testing/ants
 
 In that directory you should have the following files:
 
-    ./:
-    README
-    ant.py
-    antcolony.py
-    antgraph.py
-    anttsp.py
-    data
-    util
-    ./data:
-    cities.csv
-    citiesAndDistances.pickled
-    ukcities.csv
-    ./util:
-    __init__.py
-    __init__.pyc
-    plot_city_path.py
-    plot_city_path.pyc
-    sample_map.py
-    write_data_csv.py
-    write_data_pickle.py
-
+~~~
+./:
+README
+ant.py
+antcolony.py
+antgraph.py
+anttsp.py
+data
+util
+./data:
+cities.csv
+citiesAndDistances.pickled
+ukcities.csv
+./util:
+__init__.py
+__init__.pyc
+plot_city_path.py
+plot_city_path.pyc
+sample_map.py
+write_data_csv.py
+write_data_pickle.py
+~~~
 {:class="out"}
 
 Take a few minutes - look over the code - try to figure out what it is doing.
