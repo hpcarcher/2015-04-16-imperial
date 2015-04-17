@@ -17,10 +17,13 @@ Summarise an end to end test.
 
 Determine a flow pattern:
 
-    python write_data_pickle.py scottish_city_distances.csv scottish_city_distances.pickled
-    head scottish_city_distances.pickled
-    python anttsp.py 7 data/scottish_city_distances.pickled scottish_path.pickled
-    head scottish_path.pickled
+~~~
+python util/write_data_pickle.py data/scottish_city_distances.csv data/scottish_city_distances.pickled
+head data/scottish_city_distances.pickled
+python anttsp.py 7 data/scottish_city_distances.pickled scottish_path.pickled
+head scottish_path.pickled
+~~~
+{:class="in"}
 
 Question: what is possibly the simplest test we could do? 
 
@@ -47,9 +50,14 @@ Create `test_anttsp_end_to_end.py`:
     os.system("python anttsp.py 7 data/scottish_city_distances.pickled scottish_path.pickled")
     file_exists("scottish_path.pickled")
 
-Use functions as these commands will be called more than once - anticipate reuse.
+Use functions as these commands will be called more than once - anticipate
+reuse.
 
-    python test_anttsp_end_to_end.py
+~~~
+python test_anttsp_end_to_end.py
+~~~
+{:class="in"}
+
 
 <p/>
 
@@ -74,28 +82,28 @@ Solution:
     os.system("python anttsp.py 7 data/none.pickled no_path.pickled")
     file_not_exists("none.dat")
 
-
-Question - is this enough to check the program is working?
+Question: is this enough to check the program is working?
 
 Answers?
 
 No - haven't checked that the form/shape of the result is correct.
 
 Exercise - propose and implement a test for checking the form of the data
--------------------------------------------------------------
+-------------------------------------------------------------------------
 
 Remember we can't check the result against a known value for this program in most cases.
 
 How can we check it?
 
 Solution:
-   import pickle
-   import sys
 
-   from nose.tools import assert_equal
+    import pickle
+    import sys
 
-   def confirm_path_form(filename, path_length):
-	    result = pickle.load(open(filename, "r"))
+    from nose.tools import assert_equal
+
+    def confirm_path_form(filename, path_length):
+        result = pickle.load(open(filename, "r"))
             best_path_nodes = result[0]
             best_path_names = result[1]
             best_path = result[2]

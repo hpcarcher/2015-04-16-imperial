@@ -3,6 +3,7 @@ layout: lesson
 root: ../..
 ---
 
+
 ## What is Testing?
 
 <div class="objectives" markdown="1">
@@ -17,6 +18,7 @@ root: ../..
 Lets start with some questions:
 
 Question: how do you test? (post-its)
+
 * Compile the code ("if it builds, ship it")?
 * Run on correct inputs, check results by visual inspection?
 * Run on correct inputs, check results automatically?
@@ -27,6 +29,7 @@ Question: how do you test? (post-its)
 * Run to ensure fixed bugs don't reoccur?
 
 Question: if you don't test, why not? (post-its)
+
 * "I don't write buggy code". Almost all code has bugs.
 * "It's too hard". This can be a sign that the code is not well designed.
 * "My code can't be tested". Why not?
@@ -34,6 +37,7 @@ Question: if you don't test, why not? (post-its)
 * "It takes too much time and I've research to do"
 
 Embarassing situations:
+
 * [Geoffrey Chang](http://en.wikipedia.org/wiki/Geoffrey_Chang) had to retract 3 papers from [Science](http://www.sciencemag.org) due to a flipped sign bit.
 * McKitrick and Michaels published an [erratum](http://www.int-res.com/articles/cr2004/27/c027p265.pdf) to a [Climate Research 26(2) 2004](http://www.int-res.com/abstracts/cr/v26/n2/p159-173/) paper due to a [problem](http://crookedtimber.org/2004/08/25/mckitrick-mucks-it-up/) caused by degrees and radians.
 * Ariane 5 used Ariane 4 software. Ariane 5's new engines caused the code to produce a buffer overflow. Ariane 5 blew up!
@@ -41,32 +45,42 @@ Embarassing situations:
 ## Benefits of Testing
 
 Save money:
+
 * Find a bug on your laptop for free before you submit a job to a charged-for HPC resource.
  
 Save time:
+
 * Spot bugs before you analyse data produced by your scripts.
 * 1-10-100 rule.
 
 Safety net:
+
 * Fix bugs, optimise and parallelise without introducing (new) bugs.
 * EPCC and Colon Cancer Genetics Group (CCGG) of MRC Human Genetics Unit at Western General Hospital Edinburgh optimised and parallelised FORTRAN genetics code.
 
 Documentation:
+
 * How to use, or not to use, scripts and code and what they do.
 
 ## A Couple of Terms and an Observation
 
-Verification - "Have we built it correctly?" Is it bug free, precise, accurate, and repeatable?
+*Verification*: "Have we built it correctly?" Is it bug free, precise, accurate, and repeatable?
 
-Validation - "Have we built the right thing?" Is it designed in such a way as to produce the answers we are interested in, data we want, etc?
+*Validation*: "Have we built the right thing?" Is it designed in such a way as to produce the answers we are interested in, data we want, etc?
 
 Finding bugs before testing
 
 Question: what is single most effective way of finding bugs?
 
-Answer: 
-* Fagan (1976) Rigorous inspection can remove 60-90% of errors before the first test is run. M.E., Fagan (1976). [Design and Code inspections to reduce errors in program development](http://www.mfagan.com/pdfs/ibmfagan.pdf). IBM Systems Journal 15 (3): pp. 182-211.
-* Cohen (2006) The value of a code review comes within the first hour, after which reviewers can become exhausted and the issues they find become ever more trivial. J. Cohen (2006). [Best Kept Secrets of Peer Code Review](http://smartbear.com/SmartBear/media/pdfs/best-kept-secrets-of-peer-code-review.pdf). SmartBear, 2006. ISBN-10: 1599160676. ISBN-13: 978-1599160672.
+Answer: Fagan (1976) Rigorous inspection can remove 60-90% of errors before the
+first test is run. M.E., Fagan (1976). [Design and Code inspections to reduce
+errors in program development](http://www.mfagan.com/pdfs/ibmfagan.pdf). IBM
+Systems Journal 15 (3): pp. 182-211. * Cohen (2006) The value of a code review
+comes within the first hour, after which reviewers can become exhausted and the
+issues they find become ever more trivial. J. Cohen (2006). [Best Kept Secrets
+of Peer Code
+Review](http://smartbear.com/SmartBear/media/pdfs/best-kept-secrets-of-peer-code-review.pdf).
+SmartBear, 2007. ISBN-10: 1599160676. ISBN-13: 978-1599160672.
 
 ## What types of Test could we do
 
@@ -106,34 +120,39 @@ In a lot of cases yes - any complex code will have a range where its correct ope
 
 ## Look at The Code
 
-In the cloned Git repository for the workshop, switch to the directory <pre>testing/ants</pre>
+In the cloned Git repository for the workshop, switch to the directory <pre>testing</pre>
 
 Assuming you were in the root of the repository:
 
 ~~~
-$ cd testing/ants
+$ cd testing
 ~~~
 {:class="in"}
 
-In that directory you should have the following files:
+In that directory run the command "ls -R1", and you should get the following
+output:
+
 ~~~
-./:
-README
-ant.py
+.:
 antcolony.py
 antgraph.py
+ant.py
 anttsp.py
 data
+README
 util
+
 ./data:
-cities.csv
 citiesAndDistances.pickled
+cities.csv
+scottish_city_distances.csv
+scottish_city_loc.csv
+scottish_map.properties
 ukcities.csv
+
 ./util:
 __init__.py
-__init__.pyc
 plot_city_path.py
-plot_city_path.pyc
 sample_map.py
 write_data_csv.py
 write_data_pickle.py
@@ -145,17 +164,19 @@ Take a few minutes - look over the code - try to figure out what it is doing.
 Before you try running it, you will need to generate some input data.
 
 To do this, we need to use the write_data_pickle.py and this needs the argparse package:
+
 ~~~
 $ pip install argparse
 ~~~
 {:class="in"}
 
-If the package is not installed this will ask you to confirm the install command, if the package is present it will tell you.
+If the package is not installed this will ask you to confirm the install
+command, if the package is present it will tell you.
 
 Now run the write_data_pickle:
 
 ~~~
-$ python write_data_pickle.py <city data csv> <pickle output file>
+$ python util/write_data_pickle.py <city data csv> <pickle output file>
 ~~~
 {:class="in"}
 
@@ -169,6 +190,7 @@ $ python anttsp.py <number of cities> <city data file> <output file>
 Now lets discuss the output.
 
 Ask about what code is like - the running of it, the structure and other issues:
+
 * poor structure in places
 * comments are not brilliant
 * poor naming
@@ -189,6 +211,7 @@ this is valuable as between that and writing new additions with tests, you can r
 Before moving onto the next part - the last challenge here is to write down a test (in plain language).
 
 Choose something about the program code and write down a test:
+
 * what are you testing
 * what data do you need
 * what are the pass or fail criteria
@@ -198,7 +221,6 @@ Choose something about the program code and write down a test:
 These do not have to be perfect, indeed testing is an iterative and responsive process which will build up over time.
 
 Is there anyone willing to give a summary of their test?
-
 
 Test structure
 --------------
@@ -216,6 +238,7 @@ Regardless of whether it is a test of a:
 * Serial application running on a single processor.
 * Parallel application running on a multiple processors.
 * Automated or manual.
+
 
 ## What Comes Next
 
