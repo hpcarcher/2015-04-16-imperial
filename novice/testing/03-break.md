@@ -35,7 +35,8 @@ Create 'test_antgraph.py':
 
 	from antgraph import AntGraph
 
-Python [nose](https://pypi.python.org/pypi/nose/) library includes tests for equality, inequality, boolean values, thrown exceptions etc.
+Python [nose](https://pypi.python.org/pypi/nose/) library includes tests for
+equality, inequality, boolean values, thrown exceptions etc.
 	
 	from nose.tools import assert_equal
         import numpy as np
@@ -54,7 +55,7 @@ Running tests:
 
 `nosetests` automatically finds, runs and reports on tests.
 
-    nosetests test_cfd.py
+    nosetests test_antgraph.py
 
 `.` denotes successful test function calls.
 
