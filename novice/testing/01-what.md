@@ -72,10 +72,13 @@ Finding bugs before testing
 
 Question: what is single most effective way of finding bugs?
 
-Answer: Fagan (1976) Rigorous inspection can remove 60-90% of errors before the
+Answer: 
+
+- Fagan (1976) Rigorous inspection can remove 60-90% of errors before the
 first test is run. M.E., Fagan (1976). [Design and Code inspections to reduce
 errors in program development](http://www.mfagan.com/pdfs/ibmfagan.pdf). IBM
-Systems Journal 15 (3): pp. 182-211. * Cohen (2006) The value of a code review
+Systems Journal 15 (3): pp. 182-211. 
+- Cohen (2006) The value of a code review
 comes within the first hour, after which reviewers can become exhausted and the
 issues they find become ever more trivial. J. Cohen (2006). [Best Kept Secrets
 of Peer Code
